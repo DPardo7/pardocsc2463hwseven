@@ -29,12 +29,12 @@ function setup() {
 
 function draw() {
   background(900);
-  
+
   if((frameCount % 60) === 0)
   {
     pitch;
   }
-  
+
   text('--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------', 0, 210);
   text('After a long day in the heat...', 610, 225);
   text('press down here for a short burst of the AC in your car!', 540, 245);
@@ -47,7 +47,6 @@ function mousePressed() {
   ampEnv.triggerAttackRelease('8n');
   osc.frequency.setValueAtTime(pitch + 200, '+1');
   ampEnv.triggerAttackRelease('4n', '+1');
-  drum.triggerAttackRelease('4n');
 
   if (mouseY > 200) {
     acEnv.triggerAttackRelease(0.5);
