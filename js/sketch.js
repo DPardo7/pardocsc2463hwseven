@@ -38,7 +38,10 @@ function draw() {
 function mousePressed() {
   console.log('pressed');
 
-  ac = loadImage('carAC.jpg');
+  ampEnv.triggerAttackRelease('8n');
+  osc.frequency.setValueAtTime(pitch + 200, '+1');
+  ampEnv.triggerAttackRelease('4n', '+1');
+  drum.triggerAttackRelease('4n');
 
   if (mouseY > 200) {
     acEnv.triggerAttackRelease(0.5);
